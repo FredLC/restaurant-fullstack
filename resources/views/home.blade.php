@@ -1,62 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.landing-page')
 
-        <title>Restaurant App</title>
-        <link rel="stylesheet" href="/css/app.css">
-         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <section id="welcome">
-      <div class="welcome-menu">
-        <div class="logo">
-          <img src="/img/restaurant-logo.png" alt="logo">
-        </div>
-        <div class="menu">
-          <div class="menu-title">
-            Menu
-          </div>
-          <ul class="links">
-            <li>
-              <a href="#">Menu</a>
-            </li>
-            <li>
-              <a href="#">Order Now</a>
-            </li>
-            <li>
-              <a href="#">Waitlist</a>
-            </li>
-            <li>
-              <a href="#">Offers</a>
-            </li>
-            <li>
-              <a href="#">Gift Cards</a>
-            </li>
-          </ul>
-        </div>
-        <div class="social-icons">
-          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        </div>
-        <div class="location">
-          <div class="address">
-            123 W 51 st St <br>
-            New York, NY, 10019 
-          </div>
-          <div class="phone-number">
-            <a href="tel:212-318-3399">212-318-3399</a>
-          </div>
-        </div>
-      </div>
-      <div class="welcome-jumbotron">
-        <h1>Try our new gourmet burgers!</h1>
-        <p class="order-now"><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Order Now</a></p>
-      </div>
-    </section>
+@section('content')
     <section id="info">
       <div class="restaurant-image">
         <img src="/img/bar-view.jpg" alt="bar view">
@@ -162,5 +106,4 @@
       </div>
       
     </section>
-    </body>
-</html>
+@endsection
