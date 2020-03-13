@@ -1,0 +1,463 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);* {
+  box-sizing: border-box;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#welcome {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  width: 100%;
+  height: 100vh;
+}
+
+#welcome .welcome-menu {
+  background-color: white;
+  padding: 50px;
+  position: relative;
+}
+
+#welcome .welcome-menu .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .logo img {
+  max-width: 100px;
+}
+
+#welcome .welcome-menu .menu {
+  margin-bottom: 50px;
+}
+
+#welcome .welcome-menu .menu-title {
+  border-bottom: 1px solid #464646;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+#welcome .welcome-menu .links li a {
+  color: black;
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  transition: color 0.3s ease-in-out;
+}
+
+#welcome .welcome-menu .links li a:hover {
+  color: red;
+}
+
+#welcome .welcome-menu .social-icons {
+  display: flex;
+}
+
+#welcome .welcome-menu .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c2c8cc;
+  color: white;
+  font-size: 0.9rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#welcome .welcome-menu .location {
+  position: absolute;
+  bottom: 30px;
+}
+
+#welcome .welcome-menu .location .address {
+  color: #7a8d99;
+  line-height: 1.7rem;
+  margin-bottom: 20px;
+}
+
+#welcome .welcome-menu .location .phone-number a {
+  color: #0971ce;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#welcome .welcome-jumbotron {
+  background: url("https://images.unsplash.com/photo-1477617722074-45613a51bf6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") no-repeat;
+  background-size: 100% 100vh;
+}
+
+#welcome .welcome-jumbotron h1 {
+  color: white;
+  font-family: "Rock Salt", cursive;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-left: 50px;
+  margin-top: 40px;
+  text-shadow: horizontal-offset vertical-offset blur color;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+#welcome .welcome-jumbotron .order-now a {
+  background-color: #e30923;
+  border-radius: 300px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px;
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+#welcome .welcome-jumbotron .order-now a:hover {
+  transition: all 0.5s ease-in;
+  transform: scale(1.1);
+}
+
+#info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+
+#info .restaurant-image img {
+  width: 100%;
+  height: 100vh;
+}
+
+#info .info-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 50px;
+}
+
+#info .info-content .paragraphs {
+  color: #525e66;
+  display: grid;
+  font-size: 1.1rem;
+  grid-template-columns: 50% 50%;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  line-height: 1.5;
+}
+
+#info .info-content .about-link {
+  color: black;
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 40px;
+}
+
+#info .info-content .about-link span {
+  margin-left: 20px;
+}
+
+#food-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f8fb;
+  padding: 100px;
+}
+
+#food-preview .button-rounded {
+  background-color: #e30923;
+  border-radius: 300px;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 100px;
+  padding: 15px;
+}
+
+#food-preview .container {
+  width: 100%;
+  position: relative;
+}
+
+#food-preview .container .left-button,
+#food-preview .container .right-button {
+  background: #e30923;
+  color: white;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: calc(50% - 25px);
+  display: inline-block;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#food-preview .container .left-button {
+  left: -35px;
+}
+
+#food-preview .container .right-button {
+  right: -35px;
+}
+
+#food-preview .food-slider {
+  font-size: 0;
+  margin: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+#food-preview .food-slider .sliding-system {
+  white-space: nowrap;
+  transform: translate3d(-20%, 0, 0);
+}
+
+#food-preview .food-slider .slide {
+  display: inline-block;
+  width: 20%;
+  position: relative;
+  height: 500px;
+  white-space: normal;
+}
+
+#food-preview .food-slider .slide:hover .background {
+  background: #f59c2e;
+  transform: translate3d(0, -200px, 0);
+}
+
+#food-preview .food-slider .slide:hover .content .food-title {
+  color: white;
+}
+
+#food-preview .food-slider .slide:hover .content .food-description {
+  color: white;
+}
+
+#food-preview .food-slider .slide .background {
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+#food-preview .food-slider .slide .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+#food-preview .food-slider .slide .content .food-title {
+  color: #e30923;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+}
+
+#food-preview .food-slider .slide .content .food-description {
+  color: #7a8d99;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+}
+
+#food-preview .food-slider .slide .content img {
+  max-width: 150px;
+  width: 95%;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
