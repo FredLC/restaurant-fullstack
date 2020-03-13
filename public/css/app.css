@@ -139,6 +139,74 @@ table {
   border-spacing: 0;
 }
 
+.welcome-jumbotron {
+  background: url("https://images.unsplash.com/photo-1477617722074-45613a51bf6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") no-repeat;
+  background-size: 100% 100vh;
+}
+
+.welcome-jumbotron h1 {
+  color: white;
+  font-family: "Rock Salt", cursive;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-left: 50px;
+  margin-top: 40px;
+  text-shadow: horizontal-offset vertical-offset blur color;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-jumbotron .order-now a {
+  background-color: #e30923;
+  border-radius: 300px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 20px;
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+.welcome-jumbotron .order-now a:hover {
+  transition: all 0.5s ease-in;
+  transform: scale(1.1);
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -146,34 +214,34 @@ h2 {
   text-align: center;
 }
 
-#welcome {
+#app-layout {
   display: grid;
   grid-template-columns: 350px 1fr;
   width: 100%;
   height: 100vh;
 }
 
-#welcome .welcome-menu {
+#app-layout .side-menu {
   background-color: white;
   padding: 50px;
   position: relative;
 }
 
-#welcome .welcome-menu .logo {
+#app-layout .side-menu .logo {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-#welcome .welcome-menu .logo img {
+#app-layout .side-menu .logo img {
   max-width: 100px;
 }
 
-#welcome .welcome-menu .menu {
+#app-layout .side-menu .menu {
   margin-bottom: 50px;
 }
 
-#welcome .welcome-menu .menu-title {
+#app-layout .side-menu .menu-title {
   border-bottom: 1px solid #464646;
   font-size: 1.2rem;
   font-weight: 700;
@@ -182,7 +250,7 @@ h2 {
   text-transform: uppercase;
 }
 
-#welcome .welcome-menu .links li a {
+#app-layout .side-menu .links li a {
   color: black;
   display: block;
   font-size: 1.1rem;
@@ -191,15 +259,15 @@ h2 {
   transition: color 0.3s ease-in-out;
 }
 
-#welcome .welcome-menu .links li a:hover {
+#app-layout .side-menu .links li a:hover {
   color: red;
 }
 
-#welcome .welcome-menu .social-icons {
+#app-layout .side-menu .social-icons {
   display: flex;
 }
 
-#welcome .welcome-menu .social-icons a {
+#app-layout .side-menu .social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -212,53 +280,21 @@ h2 {
   margin-right: 10px;
 }
 
-#welcome .welcome-menu .location {
+#app-layout .side-menu .location {
   position: absolute;
   bottom: 30px;
 }
 
-#welcome .welcome-menu .location .address {
+#app-layout .side-menu .location .address {
   color: #7a8d99;
   line-height: 1.7rem;
   margin-bottom: 20px;
 }
 
-#welcome .welcome-menu .location .phone-number a {
+#app-layout .side-menu .location .phone-number a {
   color: #0971ce;
   font-size: 1.5rem;
   font-weight: 700;
-}
-
-#welcome .welcome-jumbotron {
-  background: url("https://images.unsplash.com/photo-1477617722074-45613a51bf6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80") no-repeat;
-  background-size: 100% 100vh;
-}
-
-#welcome .welcome-jumbotron h1 {
-  color: white;
-  font-family: "Rock Salt", cursive;
-  font-size: 4rem;
-  font-weight: 900;
-  margin-left: 50px;
-  margin-top: 40px;
-  text-shadow: horizontal-offset vertical-offset blur color;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-}
-
-#welcome .welcome-jumbotron .order-now a {
-  background-color: #e30923;
-  border-radius: 300px;
-  color: white;
-  font-size: 1.5rem;
-  padding: 20px;
-  position: absolute;
-  bottom: 100px;
-  right: 100px;
-}
-
-#welcome .welcome-jumbotron .order-now a:hover {
-  transition: all 0.5s ease-in;
-  transform: scale(1.1);
 }
 
 #info {
@@ -423,41 +459,5 @@ h2 {
 #food-preview .food-slider .slide .content img {
   max-width: 150px;
   width: 95%;
-}
-
-body {
-  line-height: 1;
-  background: white;
-}
-
-a {
-  text-decoration: none;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:after,
-blockquote:before,
-q:after,
-q:before {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
 }
 

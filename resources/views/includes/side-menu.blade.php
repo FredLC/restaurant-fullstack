@@ -1,4 +1,4 @@
-<div class="welcome-menu">
+<div class="side-menu">
   <a href="/" class="logo">
     <img src="/img/restaurant-logo.png" alt="logo">
   </a>

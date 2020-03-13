@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
     </head>
     <body>
-        <section id="welcome">
+        <section id="app-layout">
           @include('includes.side-menu')
           @yield('content')
         </section>
