@@ -1,0 +1,20 @@
+#about-page {
+    background-color: white;
+    h1 {
+        color: black;
+        font-family: "Rock Salt", cursive;
+        font-size: 4rem;
+        font-weight: 900;
+        margin-left: 50px;
+        margin-top: 40px;
+        text-shadow: horizontal-offset vertical-offset blur color;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    }
+    p {
+        color: #525e66;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        margin-top: 75px;
+    }
+}
