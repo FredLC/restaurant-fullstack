@@ -80,12 +80,12 @@
               <div class="background"></div>
               <div class="content">
                 <div class="food-title">
-                  Pizzas
+                  Chicken
                 </div>
                 <div class="food-description">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel rerum repudiandae unde aliquid. Voluptatibus sit, modi ullam consectetur, officia veniam inventore dolores perferendis ipsa ipsam, eaque aliquid. A, repellat ea!
                 </div>
-                <img src="/img/pizza.jpeg" alt="">
+                <img src="/img/chicken.png" alt="">
               </div>
             </div>
             <div class="slide">
