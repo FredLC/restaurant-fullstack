@@ -18,3 +18,11 @@
         margin-top: 75px;
     }
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) {
+    .image {
+        max-width: 375px;
+        margin: 30px auto;
+    }
+}

@@ -196,6 +196,10 @@ h2 {
     justify-content: center;
     background-color: #f4f8fb;
     padding: 100px;
+    h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
     .button-rounded {
         background-color: #e30923;
         border-radius: 300px;
@@ -206,6 +210,7 @@ h2 {
     }
     .container {
         width: 100%;
+        max-width: 1400px;
         position: relative;
         .left-button,
         .right-button {
@@ -230,16 +235,15 @@ h2 {
         }
     }
     .food-slider {
-        // display: flex;
-        // justify-content: center;
-        font-size: 0;
-        margin: auto;
         width: 100%;
+        max-width: 1400px;
         overflow: hidden;
         position: relative;
+        font-size: 0;
         .sliding-system {
             white-space: nowrap;
-            transform: translate3d(-20%, 0, 0);
+            transform: translate3d(-0%, 0, 0);
+            transition: all 0.3s ease-in-out;
         }
         .slide {
             display: inline-block;
@@ -247,6 +251,7 @@ h2 {
             position: relative;
             height: 500px;
             white-space: normal;
+            cursor: pointer;
             &:hover {
                 .background {
                     background: rgb(245, 156, 46);
@@ -294,7 +299,7 @@ h2 {
                     margin-bottom: 3rem;
                 }
                 img {
-                    max-width: 150px;
+                    max-width: 250px;
                     width: 95%;
                 }
             }
@@ -305,9 +310,21 @@ h2 {
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 767px) {
     #app-layout {
-        max-width: 100%;
+        width: 100%;
+        max-width: 100vw;
         .side-menu {
-            display: none;
+            transform: translate3d(-300px, 0, 0);
+        }
+        .welcome-jumbotron {
+            width: 100%;
+            max-width: 100vw;
+            transform: translate3d(0, 0, 0);
+        }
+
+        #content-section {
+            width: 100%;
+            max-width: 100vw;
+            transform: translate3d(0, 0, 0);
         }
     }
 
@@ -315,11 +332,30 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         .info-content {
-            padding: 20px;
-            max-height: 400px;
+            padding: 60px;
             .paragraphs {
                 display: flex;
                 flex-direction: column;
+            }
+        }
+    }
+
+    #food-preview {
+        padding: 20px;
+        h2 {
+            margin-top: 50px;
+        }
+        .container {
+            .left-button {
+                left: -20px;
+            }
+            .right-button {
+                right: -20px;
+            }
+        }
+        .food-slider {
+            .slide {
+                width: 100%;
             }
         }
     }
@@ -327,12 +363,42 @@ h2 {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991px) {
-}
+    #app-layout {
+        width: 100%;
+        max-width: 100vw;
+        .side-menu {
+            transform: translate3d(-300px, 0, 0);
+        }
+        .welcome-jumbotron {
+            width: 100%;
+            max-width: 100vw;
+            transform: translate3d(0, 0, 0);
+        }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
+        #content-section {
+            width: 100%;
+            max-width: 100vw;
+            transform: translate3d(0, 0, 0);
+        }
+    }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+    #food-preview {
+        padding: 20px;
+        h2 {
+            margin-top: 50px;
+        }
+        .container {
+            .left-button {
+                left: -20px;
+            }
+            .right-button {
+                right: -20px;
+            }
+        }
+        .food-slider {
+            .slide {
+                width: 50%;
+            }
+        }
+    }
 }
