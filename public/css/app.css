@@ -9069,6 +9069,7 @@ table {
 
 #about-page {
   background-color: white;
+  height: 100vh;
 }
 
 #about-page h1 {
@@ -9094,6 +9095,48 @@ table {
   .image {
     max-width: 375px;
     margin: 30px auto;
+  }
+}
+
+#waitlist-page {
+  background-color: white;
+  height: 100vh;
+}
+
+#waitlist-page h1 {
+  color: black;
+  font-family: "Rock Salt", cursive;
+  font-size: 3rem;
+  font-weight: 900;
+  margin-left: 50px;
+  margin-top: 40px;
+  text-shadow: horizontal-offset vertical-offset blur color;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
+
+#waitlist-page form {
+  margin-top: 75px;
+  margin-left: 50px;
+}
+
+#waitlist-page form .form-group label {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#waitlist-page form button[type=submit] {
+  background-color: #0971ce;
+}
+
+@media (max-width: 767px) {
+  #waitlist-page h1 {
+    font-size: 2.2rem;
+    margin: 40px;
+    text-align: center;
+  }
+
+  #waitlist-page form {
+    margin: 75px 20px;
   }
 }
 

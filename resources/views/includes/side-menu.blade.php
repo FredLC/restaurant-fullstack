@@ -11,7 +11,7 @@
         <a href="/menu">Menu</a>
       </li>
       <li>
-        <a href="/">Order Now</a>
+        <a href="/about">About Us</a>
       </li>
       <li>
         <a href="/waitlist">Waitlist</a>
