@@ -63,3 +63,10 @@ Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
 Route::get('/admin/customers/subscribers', 'admin\CustomersController@subscribers');
 
 Route::get('/admin/customers/reservations', 'admin\CustomersController@reservations');
+
+// Users
+Route::get('/admin/users', 'admin\UsersController@index');
+
+Route::get('/admin/users/create', 'admin\UsersController@create');
+
+Route::get('/admin/users/{id}/edit', 'admin\UsersController@edit');
