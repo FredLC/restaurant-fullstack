@@ -133,7 +133,7 @@
                                             <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                         </li> --}}
                                     @else
-                                        {{ Auth::user()->name }}
+                                        {{ Auth::user()->fname }} {{ Auth::user()->lname }}
                                     @endguest
                                     </h5>
                                 </div>
