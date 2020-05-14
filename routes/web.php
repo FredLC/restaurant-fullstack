@@ -28,10 +28,6 @@ Route::get('/menu', 'StaticPagesController@menu');
 
 Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
 
-Route::get('/', function () {
-    return view('home');
-});
-
 // Admin dashboard
 Route::get('/admin', 'admin\AdminController@dashboard');
 
