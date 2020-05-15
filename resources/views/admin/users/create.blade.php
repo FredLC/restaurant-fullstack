@@ -29,31 +29,66 @@
                         </div>
                         <div class="card">
                             <div class="card-body">
-                                <form>
+                                <form method="POST" action="/admin/users">
+                                    @csrf
                                     <div class="form-group">
-                                        <label for="firstName" class="col-form-label">First Name</label>
-                                        <input name="firstName" id="firstNameInput" type="text" class="form-control">
+                                        <label for="inputfirstname" class="col-form-label">First Name</label>
+                                        <input id="inputfirstname" type="text" class="form-control form-control-lg @error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="name" placeholder="First Name" autofocus>
+
+                                        @error('fname')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="lastName" class="col-form-label">Last Name</label>
-                                        <input name="lastName" id="lastNameInput" type="text" class="form-control">
+                                        <label for="inputlastname" class="col-form-label">Last Name</label>
+                                        <input id="inputlastname" type="text" class="form-control form-control-lg @error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="name" placeholder="Last Name" autofocus>
+
+                                        @error('lname')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="email" class="col-form-label">Email</label>
-                                        <input name="email" id="emailInput" type="email" class="form-control">
+                                        <label for="inputemail" class="col-form-label">Email</label>
+                                        <input id="inputemail" type="email" class="form-control form-control-lg @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+
+                                        @error('email')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="password" class="col-form-label">Password</label>
-                                        <input name="password" id="passwordInput" type="password" class="form-control">
+                                        <label for="inputpassword" class="col-form-label">Password</label>
+                                        <input id="inputpassword" type="password" class="form-control form-control-lg @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label for="role">Select Role</label>
-                                        <select class="form-control" id="roleInput">
-                                            <option value="admin">Admin</option>
-                                            <option value="employee">Employee</option>
+                                        <label for="inputpassword">Confirm Password</label>
+                                        <input id="inputpassword" type="password" class="form-control form-control-lg" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputRole">Select Role</label>
+                                        <select name="role_id" class="form-control" id="inputRole">
+                                            @foreach ($roles as $role)
+                                                <option value="{{ $role->id }}"
+                                                    @if ($role->title == 'employee')
+                                                        selected
+                                                    @endif
+                                                    >{{ $role->title }}
+                                                </option>
+                                            @endforeach
                                         </select>
                                     </div>
-                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>
